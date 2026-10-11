@@ -23,6 +23,7 @@ DB_PATH = os.environ.get("VULNEXIS_DB", os.environ.get("QSHIELD_DB", str(BASE_DI
 
 app = Flask(__name__)
 app.config["MAX_CONTENT_LENGTH"] = 100 * 1024 * 1024  # 100 MB per upload
+app.config["TEMPLATES_AUTO_RELOAD"] = True
 log = logging.getLogger("vulnexis")
 
 SCHEMA = """

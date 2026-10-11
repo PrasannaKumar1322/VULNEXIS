@@ -7,27 +7,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/style.css?v=9">
 </head>
 <body>
   <a class="skip" href="#view">Skip to content</a>
   <div class="app">
     <aside class="sidebar" id="sidebar" aria-label="Main">
       <div class="brand">
-        <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M16 2.5 4.5 7v8.2c0 7 4.7 12.4 11.5 14.3 6.8-1.9 11.5-7.3 11.5-14.3V7L16 2.5Z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="15" r="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m19.5 18.5 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <div><strong>VULNEXIS</strong><span>Quantum cryptography risk scanner</span></div>
+        <div class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="24" height="24">
+            <polygon points="18,2 32,10 32,26 18,34 4,26 4,10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+            <polygon points="18,8 26,12.8 26,23.2 18,28 10,23.2 10,12.8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.55"/>
+            <circle cx="18" cy="18" r="3.2" fill="currentColor"/>
+            <path d="M18 8v6.5M18 21.5V28M10 12.8l5.5 3.2M20.5 20l5.5 3.2M26 12.8 20.5 16M15.5 20 10 23.2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <div class="brand-row"><strong>VULNEXIS</strong><em class="brand-tag">PQC</em></div>
+          <span>Quantum Threat &amp; Crypto Posture</span>
+        </div>
       </div>
+
       <nav class="nav" id="nav">
-        <a href="#/overview" data-route="overview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Overview</a>
-        <a href="#/upload" data-route="upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>Upload and scan</a>
-        <a href="#/tls" data-route="tls"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg>TLS endpoint scan</a>
-        <a href="#/results" data-route="results"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.5-4.5"/></svg>Analysis results</a>
-        <a href="#/fixfirst" data-route="fixfirst"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 8 4 4-4 4M8 12h8"/></svg>What to fix first</a>
-        <a href="#/risk" data-route="risk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="m12 17 4-5"/></svg>Risk score</a>
-        <a href="#/plan" data-route="plan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 7 2 2 3-3"/><path d="M12 8h8"/><path d="m4 16 2 2 3-3"/><path d="M12 17h8"/></svg>Migration plan</a>
-        <a href="#/history" data-route="history"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>History and reports</a>
+        <div class="nav-group-label">Command Center</div>
+        <a href="#/overview" data-route="overview"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Executive Overview</span></a>
+        <a href="#/fixfirst" data-route="fixfirst"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m12 8 4 4-4 4M8 12h8"/></svg><span>What to Fix First</span></a>
+
+        <div class="nav-group-label">Attack Surface Scanners</div>
+        <a href="#/upload" data-route="upload"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0-4 4m4-4 4 4"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg><span>Source &amp; Artifact Scan</span></a>
+        <a href="#/tls" data-route="tls"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></svg><span>Live TLS Endpoint Probe</span></a>
+
+        <div class="nav-group-label">Intelligence &amp; Governance</div>
+        <a href="#/results" data-route="results"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.5-4.5"/></svg><span>Cryptographic Findings</span></a>
+        <a href="#/risk" data-route="risk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a8 8 0 1 1 16 0"/><path d="m12 17 4-5"/></svg><span>Multi-Factor Risk Matrix</span></a>
+        <a href="#/plan" data-route="plan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 7 2 2 3-3"/><path d="M12 8h8"/><path d="m4 16 2 2 3-3"/><path d="M12 17h8"/></svg><span>NIST PQC Migration Plan</span></a>
+        <a href="#/history" data-route="history"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>Audit History &amp; Reports</span></a>
       </nav>
+
       <div class="side-foot">
+        <div class="side-compliance">
+          <div class="side-comp-title">NIST PQC STANDARD ENGINE</div>
+          <div class="side-comp-tags"><span>FIPS 203</span><span>FIPS 204</span><span>FIPS 205</span></div>
+        </div>
         <div class="pill" id="backendPill" role="status"><i class="dot"></i><span>Connecting to backend</span></div>
       </div>
     </aside>
@@ -35,31 +56,32 @@
 
     <div class="main-col">
       <header class="topbar">
-        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-        </button>
-        <h1 id="pageTitle">Overview</h1>
         <div class="top-actions">
-          <label class="theme-picker" title="Change color theme">
-            <span>Theme</span>
-            <select id="themeSelect" aria-label="Choose color theme">
-              <option value="executive">💎 Executive Slate (Professional)</option>
-              <option value="dark">🌌 Classic Dark</option>
-              <option value="cyberpunk">⚡ Cyber Red Team</option>
-              <option value="monochrome">🖤 Black & White Minimal</option>
-            </select>
-          </label>
-          <label class="scan-picker" id="scanPicker" hidden>
-            <span>Viewing</span>
-            <select id="scanSelect" aria-label="Choose which scan to view"></select>
-          </label>
-          <a class="btn primary" href="#/upload">New scan</a>
+          <div class="topbar-left">
+            <label class="theme-picker" title="Change color theme">
+              <span>Theme</span>
+              <select id="themeSelect" aria-label="Choose color theme">
+                <option value="executive">💎 Executive Slate (Professional)</option>
+                <option value="dark">🌌 Classic Dark</option>
+                <option value="cyberpunk">⚡ Cyber Red Team</option>
+                <option value="monochrome">🖤 Black &amp; White Minimal</option>
+              </select>
+            </label>
+          </div>
+          <div class="topbar-right">
+            <label class="scan-picker" id="scanPicker" hidden>
+              <span>Active Target</span>
+              <select id="scanSelect" aria-label="Choose which scan to view"></select>
+            </label>
+            <a class="btn" href="#/tls">TLS Probe</a>
+            <a class="btn primary" href="#/upload">+ New Scan</a>
+          </div>
         </div>
       </header>
       <main id="view" tabindex="-1"></main>
     </div>
   </div>
   <div id="toast" role="status" aria-live="polite"></div>
-  <script src="/static/js/app.js"></script>
+  <script src="/static/js/app.js?v=9"></script>
 </body>
 </html>
